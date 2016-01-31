@@ -18,11 +18,13 @@ program
  * list or configure services
  */
 if (program.list) {
-  search.list();
+  console.log('list all available services!');
+  process.exit(0);
 }
 
 if (program.configure) {
-  search.configure();
+  console.log('configure new service');
+  process.exit(0);
 }
 
 /**
