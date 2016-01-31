@@ -11,15 +11,14 @@ npm install search-cli
 
 # usage
 ```
-search [options] <query>
-```
+  Usage: search [options] <query>
 
-## options
-```
--a, --application   application to open results in
--s, --service       service to perform search on (e.g. google, npm)
--c, --configure     configure a new service
--l, --list          list configured services
--h, --help          help
--v, --version       version
+  Options:
+
+    -h, --help                       output usage information
+    -V, --version                    output the version number
+    -a, --application <application>  application to open results with
+    -s, --service <service>          to perform search on (e.g. google, npm)
+    -c, --configure                  configure a new service
+    -l, --list                       list configured services
 ```
