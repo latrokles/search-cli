@@ -6,6 +6,10 @@
   "scripts": {
     "test": "echo \"nothing yet!\""
   },
+  "preferGlobal": true,
+  "bin": {
+      "search": "index.js"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/latrokles/search.git"
