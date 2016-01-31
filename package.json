@@ -8,7 +8,7 @@
   },
   "preferGlobal": true,
   "bin": {
-      "search": "index.js"
+    "search": "index.js"
   },
   "repository": {
     "type": "git",
@@ -26,6 +26,8 @@
   },
   "homepage": "https://github.com/latrokles/search-cli#readme",
   "dependencies": {
-    "commander": "^2.9.0"
+    "chai": "^3.5.0",
+    "commander": "^2.9.0",
+    "mocha": "^2.4.5"
   }
 }
