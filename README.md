@@ -6,11 +6,6 @@ functionality, but with a different implementation.
 
 a small experimenting learning js and node (and just having fun).
 
-# install
-```
-npm install search-cli
-```
-
 # usage
 ```
   Usage: search [options] <query>
@@ -23,3 +18,16 @@ npm install search-cli
     -c, --configure                  configure a new service
     -l, --list                       list configured services
 ```
+
+# services
+search-cli services are stored in a json configuration file placed in the user's
+home directory during installation (at ~/.search-cli.json).
+
+search-cli comes with some services already configured by default, but new 
+services can be configured by:
+
+1. running search-cli with the ``` --configure ``` flag.
+1. manually editing the configuration file to add a new service.
+
+# license
+[MIT](https://github.com/latrokles/search-cli/blob/master/LICENSE)

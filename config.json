@@ -1,0 +1,40 @@
+{
+    "services": {
+        "amazon": {
+            "url": "https://smile.amazon.com/s/?keywords=%PARAM%"
+        },
+        "facebook": {
+            "url": "https://www.facebook.com/search/top/?q=%PARAM%"
+        },
+        "gmail": {
+            "url": "https://mail.google.com/mail/u/0/#search/%PARAM%"
+        },
+        "github": {
+            "url": "https://github.com/search?utf8=✓&q=%PARAM%"
+        },
+        "google": {
+            "url": "https://www.google.com/search?q=%PARAM%"
+        },
+        "imdb": {
+            "url": "https://www.imdb.com/find?q=%PARAM%"
+        },
+        "lobsters": {
+            "url": "https://lobste.rs/search?utf8=✓&q=%PARAM%"
+        },
+        "stackoverflow": {
+            "url": "https://stackoverflow.com/search?q=%PARAM%"
+        },
+        "twitter": {
+            "url": "https://twitter.com/search?q=%PARAM%"
+        },
+        "vimeo": {
+            "url": "https://vimeo.com/search?q=%PARAM%"
+        },
+        "wikipedia": {
+            "url": "https://en.wikipedia.org/wiki/Special:Search?search=%PARAM%"
+        },
+        "youtube": {
+            "url": "https://www.youtube.com/results?search_query=%PARAM%"
+        }
+    }
+}
