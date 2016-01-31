@@ -17,7 +17,6 @@ npm install search-cli
 
     -h, --help                       output usage information
     -V, --version                    output the version number
-    -a, --application <application>  application to open results with
     -s, --service <service>          to perform search on (e.g. google, npm)
     -c, --configure                  configure a new service
     -l, --list                       list configured services
