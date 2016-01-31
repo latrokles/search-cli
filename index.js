@@ -14,15 +14,22 @@ program
   .option('-l, --list', 'list configured services')
   .parse(process.argv);
 
-/** 
+/**
  * list or configure services
  */
-if (program.list) search.list();
-if (program.configure) search.configure();
+if (program.list) {
+  console.log('list all available services!');
+  process.exit(0);
+}
+
+if (program.configure) {
+  console.log('configure new service');
+  process.exit(0);
+}
 
 /**
  * handle missing args
- */ 
+ */
 if (!program.args.length) {
   console.error('missing query...');
   console.log(program.help());
