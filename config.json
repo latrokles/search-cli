@@ -1,0 +1,40 @@
+{
+    "services": {
+        "amazon": {
+            "url": ""
+        },
+        "facebook": {
+            "url": ""
+        },
+        "gmail": {
+            "url": ""
+        },
+        "github": {
+            "url": ""
+        },
+        "google": {
+            "url": ""
+        },
+        "imdb": {
+            "url": ""
+        },
+        "lobsters": {
+            "url": ""
+        },
+        "stackoverflow": {
+            "url": ""
+        },
+        "twitter": {
+            "url": ""
+        },
+        "vimeo": {
+            "url": ""
+        },
+        "wikipedia": {
+            "url": ""
+        },
+        "youtube": {
+            "url": ""
+        }
+    }
+}
