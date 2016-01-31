@@ -6,9 +6,13 @@
   "scripts": {
     "test": "echo \"nothing yet!\""
   },
+  "preferGlobal": true,
+  "bin": {
+      "search": "index.js"
+  },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/latrokles/search.git"
+    "url": "git+https://github.com/latrokles/search-cli.git"
   },
   "keywords": [
     "cli",
@@ -18,7 +22,10 @@
   "author": "latrokles",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/latrokles/search/issues"
+    "url": "https://github.com/latrokles/search-cli/issues"
   },
-  "homepage": "https://github.com/latrokles/search#readme"
+  "homepage": "https://github.com/latrokles/search-cli#readme",
+  "dependencies": {
+    "commander": "^2.9.0"
+  }
 }
