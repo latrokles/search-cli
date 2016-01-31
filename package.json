@@ -1,0 +1,24 @@
+{
+  "name": "search-cli",
+  "version": "0.1.0",
+  "description": "simple command line tool to perform web searches",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"nothing yet!\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/latrokles/search.git"
+  },
+  "keywords": [
+    "cli",
+    "search",
+    "web"
+  ],
+  "author": "latrokles",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/latrokles/search/issues"
+  },
+  "homepage": "https://github.com/latrokles/search#readme"
+}
