@@ -4,7 +4,7 @@
   "description": "simple command line tool to perform web searches",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"nothing yet!\""
+    "test": "xo --space && mocha"
   },
   "preferGlobal": true,
   "bin": {
@@ -28,6 +28,7 @@
   "dependencies": {
     "chai": "^3.5.0",
     "commander": "^2.9.0",
-    "mocha": "^2.4.5"
+    "mocha": "^2.4.5",
+    "xo": "^0.12.1"
   }
 }
