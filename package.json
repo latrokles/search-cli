@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/latrokles/search/issues"
   },
-  "homepage": "https://github.com/latrokles/search#readme"
+  "homepage": "https://github.com/latrokles/search#readme",
+  "dependencies": {
+    "commander": "^2.9.0"
+  }
 }
