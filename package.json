@@ -4,7 +4,7 @@
   "description": "simple command line tool to perform web searches",
   "main": "index.js",
   "scripts": {
-    "test": "xo --space && mocha"
+    "test": "xo --space --env=mocha && mocha"
   },
   "preferGlobal": true,
   "bin": {
