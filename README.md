@@ -21,13 +21,35 @@ a small experimenting learning js and node (and just having fun).
 
 # services
 search-cli services are stored in a json configuration file placed in the user's
-home directory during installation (at ~/.search-cli.json).
+home directory during installation (at ```~/.search-cli.json```).
 
 search-cli comes with some services already configured by default, but new 
 services can be configured by:
 
-1. running search-cli with the ``` --configure ``` flag.
+1. running search-cli with the ``` --configure ``` flag (this runs in interactive mode).
 1. manually editing the configuration file to add a new service.
+
+# examples
+
+** search amazon **
+```
+search -s amazon daniel suarez
+```
+
+** search google **
+```
+search -s google what is the airspeed velocity of an unladen swallow?
+```
+
+or 
+```
+search what is the airspeed velocity of an unladen swallow?
+```
+
+** youtube **
+```
+search -s youtube nodebots
+```
 
 # license
 [MIT](https://github.com/latrokles/search-cli/blob/master/LICENSE)
