@@ -16,10 +16,7 @@ currently works on osx and linux, no window support yet.
 # installation
 
 1. install from npm
-```
-npm install -g search-cli
-```
-
+  ```npm install -g search-cli```
 1. clone this repository and install from source
 ```
 git clone https://github.com/latrokles/search-cli.git
