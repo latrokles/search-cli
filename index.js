@@ -66,7 +66,7 @@ function runSearch() {
     launch(searchURI);
     process.exit(0);
   }
-  var msg = '%s is not configured, plase use --configure option to add it as a new service';
+  var msg = '%s is not configured, please use --configure option to add it as a new service';
   onError(util.format(msg, service));
 }
 

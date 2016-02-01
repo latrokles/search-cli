@@ -1,6 +1,6 @@
 {
   "name": "search-cli",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "simple command line tool to perform web searches",
   "main": "index.js",
   "scripts": {
