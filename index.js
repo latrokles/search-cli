@@ -18,7 +18,12 @@ program
  * list or configure services
  */
 if (program.list) {
-  console.log('list all available services!');
+  console.log('these are the services you can search:');
+  console.log('');
+  var services = search.getAvailableServices();
+  services.forEach(function (serviceName) {
+    console.log(serviceName);
+  });
   process.exit(0);
 }
 
