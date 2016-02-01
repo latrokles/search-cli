@@ -1,3 +1,4 @@
+'use strict';
 
 var expect = require('chai').expect;
 var search = require('../lib/search');
@@ -10,7 +11,7 @@ describe('Search', function () {
     search.configuration = TEST_CONFIG_FILE;
   });
 
-  describe('.availableServices()', function () {
+  describe('.getAvailableServices()', function () {
     it('returns non-empty array of configured services', function () {
       var services = search.getAvailableServices();
 
@@ -18,6 +19,18 @@ describe('Search', function () {
       expect(services).to.have.length.above(0);
       expect(services).to.include('amazon');
       expect(services).to.include('google');
+    });
+  });
+
+  describe('.resolveQuery(serviceUrl, query)', function () {
+    it('returns a fully constructed query url', function () {
+      var url = 'https://www.google.com/search?q=%s';
+      var query = 'how to send 5.12';
+
+      var expected = 'https://www.google.com/search?q=how%20to%20send%205.12';
+      var actual = search.resolveQuery(url, query);
+      expect(actual).to.be.a('string');
+      expect(actual).to.equal(expected);
     });
   });
 });
