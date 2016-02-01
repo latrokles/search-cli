@@ -6,6 +6,25 @@ functionality, but with a different implementation.
 
 a small experimenting learning js and node (and just having fun).
 
+currently works on osx and linux, no window support yet.
+
+# pre-requsites
+
+1. node
+1. npm
+
+# installation
+
+I want to publish this to npm, but haven't gotten a chance to get acquainted
+with the process to do so. 
+
+for now, it can be installed by:
+```
+git clone https://github.com/latrokles/search-cli.git
+cd search-cli
+npm install
+```
+
 # usage
 ```
   Usage: search [options] <query>
