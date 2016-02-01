@@ -9,6 +9,7 @@ describe('launcher', function () {
       var actual = launcher.command();
 
       expect(actual).to.be.a('string');
+      expect(actual).to.equal('open');
     });
   });
 });
