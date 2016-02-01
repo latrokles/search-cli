@@ -50,13 +50,18 @@ describe('search', function () {
 
   describe('.addNewService(name, url)', function () {
     it('adds a new service to the config file', function () {
-      var configuredServiceCountBefore = search.getAvailableServices().length;
+      var serviceName = 'some service';
+      var serviceURL = 'http://some-url.com/search?q=%s';
 
-      search.addNewService('some service', 'http://some-url.com/search?q=%s');
-      var expectedCount = configuredServiceCountBefore + 1;
+      var expectedCount = search.getAvailableServices().length + 1;
+      search.addNewService(serviceName, serviceURL);
+
       var actualCount = search.getAvailableServices().length;
-
       expect(actualCount).to.equal(expectedCount);
+
+      var expectedUri = 'http://some-url.com/search?q=question';
+      var actualUri = search.getServiceURI('question', serviceName);
+      expect(actualUri).to.equal(expectedUri);
     });
   });
 });
