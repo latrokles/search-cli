@@ -35,4 +35,16 @@ describe('Search', function () {
       expect(actual).to.equal(expected);
     });
   });
+
+  describe('.getServiceURI(query, service)', function () {
+    it('returns a fully constructed search uri for a given service', function () {
+      var service = 'google';
+      var query = 'what is the airspeed velocity of an unladen swallow?';
+      var expected = 'https://www.google.com/search?q=what%20is%20the%20airspeed%20velocity%20of%20an%20unladen%20swallow%3F';
+
+      var actual = search.getServiceURI(query, service);
+      expect(actual).to.be.a('string');
+      expect(actual).to.equal(expected);
+    });
+  });
 });
