@@ -46,7 +46,7 @@ or
 search what is the airspeed velocity of an unladen swallow?
 ```
 
-**youtube**
+**search youtube**
 ```
 search -s youtube nodebots
 ```
