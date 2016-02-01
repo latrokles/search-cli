@@ -3,9 +3,10 @@
 'use strict';
 
 var program = require('commander');
-var pjson = require('./package.json');
+var prompt = require('prompt');
 
 var launch = require('./lib/launcher').launch;
+var pjson = require('./package.json');
 var search = require('./lib/search');
 
 program
@@ -21,26 +22,11 @@ program
  */
 if (program.list) {
   list();
+} else if (program.configure) {
+  configure();
+} else {
+  runSearch();
 }
-
-if (program.configure) {
-  console.log('configure new service');
-  process.exit(0);
-}
-
-/**
- * handle missing args
- */
-if (!program.args.length) {
-  console.error('missing query...');
-  console.log(program.help());
-  process.exit(1);
-}
-
-/**
- * run query
- */
-runSearch(program.args, program.service);
 
 function list() {
   console.log('these are the services you can search:');
@@ -53,8 +39,33 @@ function list() {
   process.exit(0);
 }
 
-function runSearch(query, service) {
-  var searchURI = search.getServiceURI(query.join(' '), service);
+function configure() {
+  console.log('enter new service information:');
+  prompt.start();
+  prompt.get(['service', 'url'], function (err, result) {
+    if (err) {
+      onError(err);
+    }
+
+    console.log('configuring new service...');
+    search.addNewService(result.service, result.url);
+    process.exit(0);
+  });
+}
+
+function runSearch() {
+  if (!program.args.length) {
+    onError('missing query...');
+  }
+  var query = program.args.join(' ');
+  var service = program.service;
+  var searchURI = search.getServiceURI(query, service);
   launch(searchURI);
   process.exit(0);
+}
+
+function onError(errorMessage) {
+  console.error(errorMessage);
+  console.log(program.help());
+  process.exit(1);
 }
