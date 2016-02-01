@@ -8,7 +8,9 @@ var search = require('../lib/search');
 describe('Search', function () {
   before(function () {
     // overwrite configuration file for test purposes.
-    search.configuration = TEST_CONFIG_FILE;
+    search.configuration = function () {
+      return TEST_CONFIG_FILE;
+    };
   });
 
   describe('.getAvailableServices()', function () {
