@@ -4,6 +4,8 @@
 
 var program = require('commander');
 var pjson = require('./package.json');
+
+var launch = require('./lib/launcher').launch;
 var search = require('./lib/search');
 
 program
@@ -38,7 +40,7 @@ if (!program.args.length) {
 /**
  * run query
  */
-search.query(program.args, program.service);
+runSearch(program.args, program.service);
 
 function list() {
   console.log('these are the services you can search:');
@@ -48,5 +50,11 @@ function list() {
     .forEach(function (serviceName) {
       console.log(serviceName);
     });
+  process.exit(0);
+}
+
+function runSearch(query, service) {
+  var searchURI = search.getServiceURI(query.join(' '), service);
+  launch(searchURI);
   process.exit(0);
 }
