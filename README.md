@@ -15,10 +15,12 @@ currently works on osx and linux, no window support yet.
 
 # installation
 
-I want to publish this to npm, but haven't gotten a chance to get acquainted
-with the process to do so. 
+1. install from npm
+```
+npm install -g search-cli
+```
 
-for now, it can be installed by:
+1. clone this repository and install from source
 ```
 git clone https://github.com/latrokles/search-cli.git
 cd search-cli
