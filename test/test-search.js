@@ -12,7 +12,7 @@ describe('Search', function () {
 
   describe('.availableServices()', function () {
     it('returns non-empty array of configured services', function () {
-      var services = search.availableServices();
+      var services = search.getAvailableServices();
 
       expect(services).to.be.a('array');
       expect(services).to.have.length.above(0);
