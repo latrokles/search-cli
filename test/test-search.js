@@ -1,9 +1,9 @@
 'use strict';
 
+const TEST_CONFIG_FILE = './test/test-config.json';
+
 var expect = require('chai').expect;
 var search = require('../lib/search');
-
-const TEST_CONFIG_FILE = './test/test-config.json';
 
 describe('Search', function () {
   before(function () {
@@ -22,13 +22,13 @@ describe('Search', function () {
     });
   });
 
-  describe('.resolveQuery(serviceUrl, query)', function () {
+  describe('.buildSearchURI(serviceUrl, query)', function () {
     it('returns a fully constructed query url', function () {
       var url = 'https://www.google.com/search?q=%s';
       var query = 'how to send 5.12';
 
       var expected = 'https://www.google.com/search?q=how%20to%20send%205.12';
-      var actual = search.resolveQuery(url, query);
+      var actual = search.buildSearchURI(url, query);
       expect(actual).to.be.a('string');
       expect(actual).to.equal(expected);
     });
