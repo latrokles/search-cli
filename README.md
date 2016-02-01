@@ -31,12 +31,12 @@ services can be configured by:
 
 # examples
 
-** search amazon **
+**search amazon**
 ```
 search -s amazon daniel suarez
 ```
 
-** search google **
+**search google**
 ```
 search -s google what is the airspeed velocity of an unladen swallow?
 ```
@@ -46,7 +46,7 @@ or
 search what is the airspeed velocity of an unladen swallow?
 ```
 
-** youtube **
+**youtube**
 ```
 search -s youtube nodebots
 ```
