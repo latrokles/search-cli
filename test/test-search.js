@@ -46,6 +46,14 @@ describe('search', function () {
       expect(actual).to.be.a('string');
       expect(actual).to.equal(expected);
     });
+
+    it('returns null if service is not configured', function () {
+      var serviceName = 'bogusService';
+      var query = 'how do I search bogus service';
+
+      var actual = search.getServiceURI(query, serviceName);
+      expect(actual).to.equal(null);
+    });
   });
 
   describe('.addNewService(name, url)', function () {
