@@ -7,7 +7,7 @@
     "pretest": "cp config.json test/test-config.json",
     "test": "xo --space --env=mocha && mocha",
     "posttest": "rm test/test-config.json",
-    "install": "cp config.json $HOME/.search-cli.json"
+    "install": "cp -n config.json $HOME/.search-cli.json"
   },
   "preferGlobal": true,
   "bin": {
