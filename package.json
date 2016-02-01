@@ -4,7 +4,9 @@
   "description": "simple command line tool to perform web searches",
   "main": "index.js",
   "scripts": {
-    "test": "xo --space --env=mocha && mocha"
+    "pretest": "cp config.json test/test-config.json",
+    "test": "xo --space --env=mocha && mocha",
+    "posttest": "rm test/test-config.json"
   },
   "preferGlobal": true,
   "bin": {
