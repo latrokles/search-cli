@@ -5,7 +5,7 @@ const TEST_CONFIG_FILE = './test/test-config.json';
 var expect = require('chai').expect;
 var search = require('../lib/search');
 
-describe('Search', function () {
+describe('search', function () {
   before(function () {
     // overwrite configuration file for test purposes.
     search.configuration = function () {
