@@ -47,4 +47,16 @@ describe('search', function () {
       expect(actual).to.equal(expected);
     });
   });
+
+  describe('.addNewService(name, url)', function () {
+    it('adds a new service to the config file', function () {
+      var configuredServiceCountBefore = search.getAvailableServices().length;
+
+      search.addNewService('some service', 'http://some-url.com/search?q=%s');
+      var expectedCount = configuredServiceCountBefore + 1;
+      var actualCount = search.getAvailableServices().length;
+
+      expect(actualCount).to.equal(expectedCount);
+    });
+  });
 });
