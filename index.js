@@ -18,8 +18,7 @@ program
  * list or configure services
  */
 if (program.list) {
-  console.log('list all available services!');
-  process.exit(0);
+  list();
 }
 
 if (program.configure) {
@@ -40,3 +39,14 @@ if (!program.args.length) {
  * run query
  */
 search.query(program.args, program.service);
+
+function list() {
+  console.log('these are the services you can search:');
+  console.log('');
+  search
+    .getAvailableServices()
+    .forEach(function (serviceName) {
+      console.log(serviceName);
+    });
+  process.exit(0);
+}
