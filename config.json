@@ -1,40 +1,40 @@
 {
     "services": {
         "amazon": {
-            "url": "https://smile.amazon.com/s/?keywords=%PARAM%"
+            "url": "https://smile.amazon.com/s/?keywords=%s"
         },
         "facebook": {
-            "url": "https://www.facebook.com/search/top/?q=%PARAM%"
+            "url": "https://www.facebook.com/search/top/?q=%s"
         },
         "gmail": {
-            "url": "https://mail.google.com/mail/u/0/#search/%PARAM%"
+            "url": "https://mail.google.com/mail/u/0/#search/%s"
         },
         "github": {
-            "url": "https://github.com/search?utf8=✓&q=%PARAM%"
+            "url": "https://github.com/search?utf8=✓&q=%s"
         },
         "google": {
-            "url": "https://www.google.com/search?q=%PARAM%"
+            "url": "https://www.google.com/search?q=%s"
         },
         "imdb": {
-            "url": "https://www.imdb.com/find?q=%PARAM%"
+            "url": "https://www.imdb.com/find?q=%s"
         },
         "lobsters": {
-            "url": "https://lobste.rs/search?utf8=✓&q=%PARAM%"
+            "url": "https://lobste.rs/search?utf8=✓&q=%s"
         },
         "stackoverflow": {
-            "url": "https://stackoverflow.com/search?q=%PARAM%"
+            "url": "https://stackoverflow.com/search?q=%s"
         },
         "twitter": {
-            "url": "https://twitter.com/search?q=%PARAM%"
+            "url": "https://twitter.com/search?q=%s"
         },
         "vimeo": {
-            "url": "https://vimeo.com/search?q=%PARAM%"
+            "url": "https://vimeo.com/search?q=%s"
         },
         "wikipedia": {
-            "url": "https://en.wikipedia.org/wiki/Special:Search?search=%PARAM%"
+            "url": "https://en.wikipedia.org/wiki/Special:Search?search=%s"
         },
         "youtube": {
-            "url": "https://www.youtube.com/results?search_query=%PARAM%"
+            "url": "https://www.youtube.com/results?search_query=%s"
         }
     }
 }

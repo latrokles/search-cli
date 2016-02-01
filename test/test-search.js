@@ -24,7 +24,7 @@ describe('Search', function () {
 
   describe('.resolveQuery(serviceUrl, query)', function () {
     it('returns a fully constructed query url', function () {
-      var url = 'https://www.google.com/search?q=%PARAM%';
+      var url = 'https://www.google.com/search?q=%s';
       var query = 'how to send 5.12';
 
       var expected = 'https://www.google.com/search?q=how%20to%20send%205.12';
