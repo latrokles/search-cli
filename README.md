@@ -14,11 +14,11 @@ currently works on osx and linux, no window support yet.
 1. npm
 
 # installation
+```
+npm install -g search-cli
+```
 
-I want to publish this to npm, but haven't gotten a chance to get acquainted
-with the process to do so. 
-
-for now, it can be installed by:
+alrnatively, you can download this repository and install from source
 ```
 git clone https://github.com/latrokles/search-cli.git
 cd search-cli
