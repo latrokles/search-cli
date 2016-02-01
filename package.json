@@ -1,13 +1,13 @@
 {
   "name": "search-cli",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "simple command line tool to perform web searches",
   "main": "index.js",
   "scripts": {
     "pretest": "cp config.json test/test-config.json",
     "test": "xo --space --env=mocha && mocha",
     "posttest": "rm test/test-config.json",
-    "install": "cp -n config.json $HOME/.search-cli.json"
+    "install": "if test -e ${HOME}/.search-cli.json; then echo 'skipping config copy'; else cp config.json $HOME/.search-cli.json; fi"
   },
   "preferGlobal": true,
   "bin": {
@@ -29,10 +29,12 @@
   },
   "homepage": "https://github.com/latrokles/search-cli#readme",
   "dependencies": {
-    "chai": "^3.5.0",
     "commander": "^2.9.0",
+    "prompt": "^0.2.14"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
     "mocha": "^2.4.5",
-    "prompt": "^0.2.14",
     "xo": "^0.12.1"
   }
 }

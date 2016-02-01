@@ -4,6 +4,7 @@
 
 var program = require('commander');
 var prompt = require('prompt');
+var util = require('util');
 
 var launch = require('./lib/launcher').launch;
 var pjson = require('./package.json');
@@ -60,11 +61,17 @@ function runSearch() {
   var query = program.args.join(' ');
   var service = program.service;
   var searchURI = search.getServiceURI(query, service);
-  launch(searchURI);
-  process.exit(0);
+
+  if (searchURI) {
+    launch(searchURI);
+    process.exit(0);
+  }
+  var msg = '%s is not configured, plase use --configure option to add it as a new service';
+  onError(util.format(msg, service));
 }
 
 function onError(errorMessage) {
+  console.log('');
   console.error(errorMessage);
   console.log(program.help());
   process.exit(1);
