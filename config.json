@@ -35,6 +35,9 @@
         },
         "youtube": {
             "url": "https://www.youtube.com/results?search_query=%s"
+        },
+        "yahoo": {
+            "url": "https://search.yahoo.com/search?p=%s"
         }
     }
 }
